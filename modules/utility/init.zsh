@@ -46,18 +46,20 @@ alias scp='noglob scp'
 alias sftp='noglob sftp'
 
 # Define general aliases.
-alias _='sudo'
-alias b='${(z)BROWSER}'
-alias cp="${aliases[cp]:-cp} -i"
+# alias _='sudo'
+# alias b='${(z)BROWSER}'
+alias c='clear'
+# alias cp="${aliases[cp]:-cp} -i"
 alias e='${(z)VISUAL:-${(z)EDITOR}}'
-alias ln="${aliases[ln]:-ln} -i"
+# alias ln="${aliases[ln]:-ln} -i"
 alias mkdir="${aliases[mkdir]:-mkdir} -p"
-alias mv="${aliases[mv]:-mv} -i"
+# alias mv="${aliases[mv]:-mv} -i"
 alias p='${(z)PAGER}'
 alias po='popd'
 alias pu='pushd'
-alias rm="${aliases[rm]:-rm} -i"
+# alias rm="${aliases[rm]:-rm} -i"
 alias type='type -a'
+
 
 # ls
 if is-callable 'dircolors'; then
@@ -90,17 +92,21 @@ else
   fi
 fi
 
-alias l='ls -1A'         # Lists in one column, hidden files.
-alias ll='ls -lh'        # Lists human readable sizes.
+# alias l='ls -1A'         # Lists in one column, hidden files.
+alias l='ls'
+# alias ll='ls -lh'        # Lists human readable sizes.
+alias ll='ls -lh'
 alias lr='ll -R'         # Lists human readable sizes, recursively.
-alias la='ll -A'         # Lists human readable sizes, hidden files.
+# alias la='ll -A'         # Lists human readable sizes, hidden files.
+alias la='ls -a'
+alias lla='ls -lha'
 alias lm='la | "$PAGER"' # Lists human readable sizes, hidden files through pager.
 alias lx='ll -XB'        # Lists sorted by extension (GNU only).
 alias lk='ll -Sr'        # Lists sorted by size, largest last.
 alias lt='ll -tr'        # Lists sorted by date, most recent last.
 alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
-alias sl='ls'            # I often screw this up.
+# alias sl='ls'            # I often screw this up.
 
 # Mac OS X Everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
