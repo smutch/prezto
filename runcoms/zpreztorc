@@ -42,6 +42,13 @@ zstyle ':prezto:load' pmodule \
   'ssh'
 
 #
+# Autosuggestions
+#
+
+# Set the query found color.
+# zstyle ':prezto:module:autosuggestions:color' found ''
+
+#
 # Editor
 #
 
@@ -129,6 +136,7 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_dsa'
 #   'main' \
 #   'brackets' \
 #   'pattern' \
+#   'line' \
 #   'cursor' \
 #   'root'
 #
